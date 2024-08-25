@@ -91,7 +91,7 @@ export const Contact: React.FC = () => {
                 rows={5}
                 value={formState.message}
                 onChange={handleChange}
-                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100 border-gray-300'}`}
+                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100 border-gray-300'} `}
                 required
               ></textarea>
             </div>
