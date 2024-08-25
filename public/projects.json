@@ -4,7 +4,7 @@
     "title": "Country API",
     "description": "A web project where a list of countries are collected from an open API endpoint.",
     "technologies": ["JavaScript", "ReactJs", "Redux", "Typescript", "Material-UI"],
-    "image": "/assets/countriesRestAPI.png",
+    "image": "/countriesRestAPI.png",
     "demoLink": "https://responsive-countries-rest-api.netlify.app/",
     "codeLink": "https://github.com/mesfint/frontend-challenges/tree/main/rest-countries-api"
   },
@@ -13,7 +13,7 @@
     "title": "Book Library",
     "description": "A MERN application for borrowing and returning books.",
     "technologies": ["JavaScript", "ReactJs", "NodeJs", "ExpressJs", "mongoDB"],
-    "image": "/assets/bookDesigner.png",
+    "image": "/bookDesigner.png",
     "demoLink": "https://booklibrary.demo",
     "codeLink": "https://github.com/mesfint/booklibrary"
   },
@@ -22,7 +22,7 @@
     "title": "Weather App",
     "description": "A web application that shows the weather of a city.",
     "technologies": ["JavaScript", "ReactJs", "Redux", "Typescript", "Material-UI"],
-    "image": "/assets/weatherDesign.png",
+    "image": "/weatherDesign.png",
     "demoLink": "https://weatherapp.demo",
     "codeLink": "https://github.com/mesfint/booklibrary" 
   }
