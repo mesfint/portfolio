@@ -18,7 +18,7 @@ export const About: React.FC = () => {
     <section id="about" className={`about py-20 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'}`}>
     <div className="container mx-auto flex flex-col items-center">
       <img 
-        src="../../public/mesfin.jpg" 
+        src="/mesfin.jpg" 
         alt="mesfin" 
         className="rounded-full w-48 h-48 object-cover object-top mb-6 mx-auto " 
       />
