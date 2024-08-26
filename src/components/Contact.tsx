@@ -1,7 +1,9 @@
 
 import emailjs from '@emailjs/browser';
 import React, { useState } from 'react';
+import { FaEnvelope, FaLinkedin, FaPhone } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 import { useTheme } from '../context/ThemeContext';
 
@@ -59,13 +61,17 @@ export const Contact: React.FC = () => {
         <p className={`mx-auto text-lg leading-relaxed max-w-prose text-center mb-8  ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-12`}>
         Feel free to reach out to me through my email,phone call and linkedin or through the  contact form. Whether you have a project in mind, a question, or just want to connect, I'd love to hear from you. Let's get in touch 😊.
     </p>
-    <div className=" mx-auto  text-center mb-12">
-    <span className={` px-4 hover:text-blue-500 cursor-pointer ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}><strong>Email:</strong> <a href="mailto:mesfintdev@gmail.com">mesfintdev@gmail.com</a></span> |
-    <span className={` px-4 hover:text-blue-500 cursor-pointer ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-12`}><strong>Phone: </strong><a href='tel:+358440646044'>+358440646044</a></span> |
-    <span className={`px-4 hover:text-blue-500 cursor-pointer ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-12`}><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mesfin/" target="_blank">Mesfin on LinkedIn</a></span>
-  
-
-    </div>
+    <div className="mx-auto text-lg leading-relaxed max-w-prose text-center mb-8 space-y-4">
+          <a href="mailto:mesfintdev@gmail.com" className={`flex items-center justify-center space-x-2 py-2 px-4 rounded-lg transition duration-200 ${theme === 'dark' ? 'bg-gray-800 hover:bg-gray-700 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-900'}`}>
+            <FaEnvelope /> <span>Email: mesfintdev@gmail.com</span>
+          </a>
+          <a href="tel:+358440646044" className={`flex items-center justify-center space-x-2 py-2 px-4 rounded-lg transition duration-200 ${theme === 'dark' ? 'bg-gray-800 hover:bg-gray-700 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-900'}`}>
+            <FaPhone /> <span>Phone: +358440646044</span>
+          </a>
+          <a href="https://www.linkedin.com/in/mesfin/" target="_blank" className={`flex items-center justify-center space-x-2 py-2 px-4 rounded-lg transition duration-200 ${theme === 'dark' ? 'bg-gray-800 hover:bg-gray-700 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-900'}`}>
+            <FaLinkedin /> <span>LinkedIn: Mesfin on LinkedIn</span>
+          </a>
+        </div>
     
   
           <form onSubmit={handleSubmit} className={`max-w-xl mx-auto  p-8 rounded-lg shadow-lg  ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} `}>
