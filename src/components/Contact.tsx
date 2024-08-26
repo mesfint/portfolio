@@ -1,7 +1,8 @@
-// components/Contact.tsx
 
 import emailjs from '@emailjs/browser';
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useTheme } from '../context/ThemeContext';
 
 export const Contact: React.FC = () => {
@@ -15,14 +16,13 @@ export const Contact: React.FC = () => {
     message: '',
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState({
       ...formState,
       [e.target.name]: e.target.value,
     });
   };
+ 
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,10 +32,21 @@ export const Contact: React.FC = () => {
       formState,
       'hvT_Dffwoza-2f0Ob'
     ).then(() => {
-      setIsSubmitted(true);
       setFormState({ from_name: '', from_email: '', message: '' });
+       // Show the toast notification
+  toast.success("Thank you for the message,I'll get back to you as soon as possible", {
+    position:  'top-center',
+    autoClose: 3000, // 3 seconds
+    hideProgressBar: true,
+  });
     }).catch((error) => {
       console.error('Failed to send email:', error);
+         // Show an error toast if the submission fails
+         toast.error('Failed to send the message. Please try again later.', {
+          position: 'top-center',
+          autoClose: 5000, // 5 seconds
+          hideProgressBar: true,
+        });
     });
   };
   
@@ -56,9 +67,7 @@ export const Contact: React.FC = () => {
 
     </div>
     
-        {isSubmitted ? (
-          <p className="text-center text-xl text-green-500">Thank you for your message! I'll get back to you soon.</p>
-        ) : (
+  
           <form onSubmit={handleSubmit} className={`max-w-xl mx-auto  p-8 rounded-lg shadow-lg  ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} `}>
             <div className="mb-4">
             <label htmlFor="name" className={`block font-bold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
@@ -111,8 +120,9 @@ export const Contact: React.FC = () => {
             </button>
           </form>
           
-        )}
+      
       </div>
+      <ToastContainer />
     </section>
   );
 };
