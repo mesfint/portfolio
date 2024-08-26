@@ -47,13 +47,13 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-bold">Follow Me</h4>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-blue-500">
+            <a href="https://www.linkedin.com/in/mesfin/" className="hover:text-blue-500">
               LinkedIn
             </a>
-            <a href="#" className="hover:text-blue-500">
+            <a href="https://github.com/mesfint" className="hover:text-blue-500">
               GitHub
             </a>
-            <a href="#" className="hover:text-blue-500">
+            <a href="https://x.com/MesfinTe" className="hover:text-blue-500">
               Twitter
             </a>
           </div>
