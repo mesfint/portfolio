@@ -46,8 +46,16 @@ export const Contact: React.FC = () => {
       <div className="container mx-auto px-4">
         <h2 className={`text-4xl font-bold text-center  ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-12`}>Contact Me</h2>
         <p className={`mx-auto text-lg leading-relaxed max-w-prose text-center mb-8  ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-12`}>
-        Feel free to reach out to me through this contact form. Whether you have a project in mind, a question, or just want to connect, I'd love to hear from you. Let's get in touch 😊.
+        Feel free to reach out to me through my email,phone call and linkedin or through the  contact form. Whether you have a project in mind, a question, or just want to connect, I'd love to hear from you. Let's get in touch 😊.
     </p>
+    <div className=" mx-auto  text-center mb-12">
+    <span className={` px-4 hover:text-blue-500 cursor-pointer ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}><strong>Email:</strong> <a href="mailto:mesfintdev@gmail.com">mesfintdev@gmail.com</a></span> |
+    <span className={` px-4 hover:text-blue-500 cursor-pointer ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-12`}><strong>Phone: </strong><a href='tel:+358440646044'>+358440646044</a></span> |
+    <span className={`px-4 hover:text-blue-500 cursor-pointer ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-12`}><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mesfin/" target="_blank">Mesfin on LinkedIn</a></span>
+  
+
+    </div>
+    
         {isSubmitted ? (
           <p className="text-center text-xl text-green-500">Thank you for your message! I'll get back to you soon.</p>
         ) : (
@@ -62,7 +70,7 @@ export const Contact: React.FC = () => {
                 id="name"
                 value={formState.from_name}
                 onChange={handleChange}
-                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100 border-gray-300'} `}
+                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gray-100 border-gray-300 text-gray-900'} `}
 
                 required
               />
@@ -77,7 +85,7 @@ export const Contact: React.FC = () => {
                 id="email"
                 value={formState.from_email}
                 onChange={handleChange}
-                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100 border-gray-300'} `}
+                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gray-100 border-gray-300 text-gray-900'} `}
                 required
               />
             </div>
@@ -91,7 +99,7 @@ export const Contact: React.FC = () => {
                 rows={5}
                 value={formState.message}
                 onChange={handleChange}
-                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100 border-gray-300'} `}
+                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gray-100 border-gray-300 text-gray-900'} `}
                 required
               ></textarea>
             </div>
