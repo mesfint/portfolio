@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
   return (
     <footer
       className={`py-10 px-6 ${
-        theme === 'dark' ? 'bg-gray-900 text-gray-100' : 'bg-gray-100 text-gray-900'
+        theme === 'dark' ? 'bg-gray-900 text-gray-100' : 'bg-gray-300 text-gray-900'
       }`}
     >
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

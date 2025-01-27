@@ -14,8 +14,8 @@ export const Home: React.FC = () => {
           <ReactTyped
             strings={[
               "I'm a Frontend Developer",
-              "a Fullstack Developer",
-              "and  a Data Analyst",
+              "A Web Performance Engineer",
+              "& A FullStack Developer",
             ]}
             typeSpeed={40}
             backSpeed={50}

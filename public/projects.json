@@ -21,13 +21,13 @@
   },
   {
     "id": 3,
-    "title": "Weather App",
-    "description": "A web application that shows the weather of a city.",
-    "type":"FrontEnd",
-    "technologies": ["JavaScript", "ReactJs", "Redux", "Typescript", "Material-UI"],
-    "image": "/weatherDesign.png",
-    "demoLink": "https://weatherapp.demo",
-    "codeLink": "https://github.com/mesfint/booklibrary" 
+    "title": "PhoneBook",
+    "description": "A FullStack Application that registers contact name & phone number.",
+    "type":"FullStack",
+    "technologies": ["JavaScript", "ReactJs", "MongoDB", "ExpressJS","API"],
+    "image": "/phoneBook.png",
+    "demoLink": "https://fullstackopen-2024-phonebook.onrender.com/",
+    "codeLink": "https://github.com/mesfin-2/Fullstackopen-2024/tree/main/part3/phonebook" 
   },
   {
     "id": 4,
@@ -36,7 +36,7 @@
     "type":"FrontEnd",
     "technologies": ["ReactJs", "Tailwind CSS", "Typescript"],
     "image": "/portfolioDesign.png",
-    "demoLink": "https://mesfin-35voqkkdo-mesfints-projects.vercel.app/",
+    "demoLink": "https://mesfin-git-main-mesfints-projects.vercel.app/",
     "codeLink": "https://github.com/mesfint/portfolio" 
   }
 
