@@ -36,7 +36,7 @@
     "type":"FrontEnd",
     "technologies": ["ReactJs", "Tailwind CSS", "Typescript"],
     "image": "/portfolioDesign.png",
-    "demoLink": "https://mesfint-portfolio2.web.app/",
+    "demoLink": "https://mesfin-35voqkkdo-mesfints-projects.vercel.app/",
     "codeLink": "https://github.com/mesfint/portfolio" 
   }
 
