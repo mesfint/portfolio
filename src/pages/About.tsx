@@ -9,13 +9,13 @@ export const About: React.FC = () => {
   // const textColor = '#1f2937'; // Consistent white text color
   // const iconBgColor = '#2563eb'; // Blue color for the icons
   const { theme } = useTheme();
-  const bgColor = theme === 'dark' ? '#1f2937' : '#ffffff'; // Consistent dark gray background for dark mode, white for light mode
-  const textColor = theme === 'dark' ? '#ffffff' : '#1f2937'; // White text for dark mode, dark text for light mode
+  const bgColor = theme === 'dark' ? '#171717' : '#ffffff'; // Consistent dark gray background for dark mode, white for light mode
+  const textColor = theme === 'dark' ? '#ffffff' : '#171717'; // White text for dark mode, dark text for light mode
   const iconBgColor = '#fff'; // Blue color for the icons
 
 
   return (
-    <section id="about" className={`about py-20 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'}`}>
+    <section id="about" className={`about py-20 ${theme === 'dark' ? 'bg-gray-950  ' : 'bg-gray-100'}`}>
     <div className="container mx-auto flex flex-col items-center">
       <img 
         src="/mesfin.jpg" 
@@ -30,6 +30,7 @@ export const About: React.FC = () => {
       <p className={`mx-auto text-lg leading-relaxed max-w-prose text-center ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
         This section provides an overview of my education, training, and skills. Here, you'll learn more about my background, the journey that led me into web development, and the key competencies I bring to every project.
       </p>
+      {/* <ResumeDownload /> */}
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"

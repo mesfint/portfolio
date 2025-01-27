@@ -7,7 +7,7 @@ export const Home: React.FC = () => {
   const { theme } = useTheme();
   
     return (
-        <main className={`home py-20 text-center ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'}`}>
+        <main className={`home py-60  text-center ${theme === 'dark' ? 'bg-gray-950' : 'bg-gray-100'}`}>
           <h1 className={`text-5xl font-bold text-gray-90 ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-12}`}>
             Welcome to My Portfolio
           </h1>

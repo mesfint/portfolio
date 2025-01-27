@@ -1,7 +1,6 @@
 
 import emailjs from '@emailjs/browser';
 import React, { useState } from 'react';
-import { FaEnvelope, FaLinkedin, FaPhone } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -55,13 +54,13 @@ export const Contact: React.FC = () => {
 
 
   return (
-    <section id="contact" className={`contact py-20   ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'}` }>
+    <section id="contact" className={`contact py-20   ${theme === 'dark' ? 'bg-gray-950' : 'bg-gray-100'}` }>
       <div className="container mx-auto px-4">
         <h2 className={`text-4xl font-bold text-center  ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-12`}>Contact Me</h2>
         <p className={`mx-auto text-lg leading-relaxed max-w-prose text-center mb-8  ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-12`}>
-        Feel free to reach out to me through my email,phone call and linkedin or through the  contact form. Whether you have a project in mind, a question, or just want to connect, I'd love to hear from you. Let's get in touch 😊.
+        Feel free to reach out to me through my email,phone call and linkedin or through the  contact form. Whether you have a project in mind, a question, or just want to connect, I'd love to hear from you. Let's get in touch .
     </p>
-    <div className="mx-auto text-lg leading-relaxed max-w-prose text-center mb-8 space-y-4">
+    {/* <div className="mx-auto text-lg leading-relaxed max-w-prose text-center mb-8 space-y-4">
           <a href="mailto:mesfintdev@gmail.com" className={`flex items-center justify-center space-x-2 py-2 px-4 rounded-lg transition duration-200 ${theme === 'dark' ? 'bg-gray-800 hover:bg-gray-700 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-900'}`}>
             <FaEnvelope /> <span>Email: mesfintdev@gmail.com</span>
           </a>
@@ -71,10 +70,10 @@ export const Contact: React.FC = () => {
           <a href="https://www.linkedin.com/in/mesfin/" target="_blank" className={`flex items-center justify-center space-x-2 py-2 px-4 rounded-lg transition duration-200 ${theme === 'dark' ? 'bg-gray-800 hover:bg-gray-700 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-900'}`}>
             <FaLinkedin /> <span>LinkedIn: Mesfin on LinkedIn</span>
           </a>
-        </div>
+        </div> */}
     
   
-          <form onSubmit={handleSubmit} className={`max-w-xl mx-auto  p-8 rounded-lg shadow-lg  ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'} `}>
+          <form onSubmit={handleSubmit} className={`max-w-xl mx-auto  p-8 rounded-lg shadow-lg  ${theme === 'dark' ? 'bg-neutral-900' : 'bg-gray-100'} `}>
             <div className="mb-4">
             <label htmlFor="name" className={`block font-bold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
             Name
@@ -85,7 +84,7 @@ export const Contact: React.FC = () => {
                 id="name"
                 value={formState.from_name}
                 onChange={handleChange}
-                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gray-100 border-gray-300 text-gray-900'} `}
+                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-neutral-900 text-white' : 'bg-gray-100 border-gray-300 text-gray-900'} `}
 
                 required
               />
@@ -100,7 +99,7 @@ export const Contact: React.FC = () => {
                 id="email"
                 value={formState.from_email}
                 onChange={handleChange}
-                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gray-100 border-gray-300 text-gray-900'} `}
+                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-neutral-900 text-white' : 'bg-gray-100 border-gray-300 text-gray-900'} `}
                 required
               />
             </div>
@@ -114,13 +113,13 @@ export const Contact: React.FC = () => {
                 rows={5}
                 value={formState.message}
                 onChange={handleChange}
-                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gray-100 border-gray-300 text-gray-900'} `}
+                className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${theme === 'dark' ? 'bg-neutral-900 text-white' : 'bg-gray-100 border-gray-300 text-gray-900'} `}
                 required
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full py-3 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-lg transition duration-200"
+              className="w-full py-3 bg-gray-800 hover:bg-gray-950 text-white font-bold rounded-lg transition duration-200"
             >
               Send Message
             </button>

@@ -23,10 +23,10 @@ export const Blog: React.FC = () => {
   }, []);
 
   return (
-    <section id="blogs" className={`blogs py-20 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'}`}>
+    <section id="blogs" className={`blogs py-20 ${theme === 'dark' ? 'bg-neutral-900' : 'bg-gray-100'}`}>
       <div className="container mx-auto text-center">
         <h2 className={`text-4xl font-bold mb-12 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-          Blog
+        Posts
         </h2>
         <p className={`mt-2 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
         </p>
@@ -40,7 +40,7 @@ export const Blog: React.FC = () => {
               key={article.id}
               className={`relative transform transition-transform duration-300 hover:scale-105 hover:shadow-lg rounded-lg border p-6 shadow-md 
               ${theme === 'dark' 
-                ? 'bg-gray-800 text-white border-gray-600' 
+                ? 'bg-gray-950 text-white border-gray-600' 
                 : 'bg-white text-gray-900 border-gray-300'}`}
             >
               {article.cover_image && (

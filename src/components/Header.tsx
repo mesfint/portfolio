@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
   return (
     <header
       className={`py-4 px-6 fixed w-full z-50 ${
-        theme === 'dark' ? 'bg-gray-900 text-gray-100' : 'bg-white text-gray-900'
+        theme === 'dark' ? 'bg-gray-950 text-gray-100' : 'bg-white text-gray-900'
       } shadow-md`}
     >
       <div className="container mx-auto flex justify-between items-center">

@@ -11,13 +11,13 @@
   },
   {
     "id": 2,
-    "title": "Book Library",
-    "description": "A MERN application for borrowing and returning books.",
-    "type":"Fullstack",
-    "technologies": ["JavaScript", "ReactJs", "NodeJs", "ExpressJs", "mongoDB"],
+    "title": "Task Manager",
+    "description": "CRUD  Application to manage personal tasks .",
+    "type":"FrontEnd",
+    "technologies": ["TypeScript", "ReactJs", "MUI", "Jest", "RTL"],
     "image": "/bookDesigner.png",
-    "demoLink": "https://booklibrary.demo",
-    "codeLink": "https://github.com/mesfint/booklibrary"
+    "demoLink": "https://task-mgt-dashboard.vercel.app/",
+    "codeLink": "https://github.com/mesfint/task-mgt-dashboard"
   },
   {
     "id": 3,
