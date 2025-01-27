@@ -15,7 +15,7 @@
     "description": "CRUD  Application to manage personal tasks .",
     "type":"FrontEnd",
     "technologies": ["TypeScript", "ReactJs", "MUI", "Jest", "RTL"],
-    "image": "/bookDesigner.png",
+    "image": "/taskMgt.png",
     "demoLink": "https://task-mgt-dashboard.vercel.app/",
     "codeLink": "https://github.com/mesfint/task-mgt-dashboard"
   },
