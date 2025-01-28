@@ -31,8 +31,8 @@ export const Blog: React.FC = () => {
         <p className={`mt-2 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
         </p>
         <p className={`mx-auto text-lg leading-relaxed max-w-prose text-center mb-8  ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-12`}>
-        Here you’ll find my latest blog posts, where I share insights, tutorials, and thoughts on various tech topics. These articles reflect my ongoing learning and contributions to the developer community.
-    </p>
+        Explore my latest blog posts, where I share insights, tutorials, and perspectives on various tech topics. These articles showcase my ongoing learning and contributions to the developer community.
+        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {articles.map(article => (

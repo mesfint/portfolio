@@ -38,8 +38,8 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col space-y-4">
           <h4 className="text-lg font-bold">About Me</h4>
           <p>
-            I am a passionate developer specializing in full-stack development. I love creating web
-            applications that solve real-world problems.
+          I am a passionate front-end developer who enjoys building web applications that solve real-world problems.
+
           </p>
         </div>
 

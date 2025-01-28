@@ -8,8 +8,9 @@ import { useTheme } from '../context/ThemeContext';
 
 export const Contact: React.FC = () => {
   const { theme } = useTheme();
-
-
+  
+  
+  
   
   const [formState, setFormState] = useState({
     from_name: '',
@@ -28,10 +29,10 @@ export const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     emailjs.send(
-      'service_zpmq8u5',
-      'template_ehcofko',
+      import.meta.env.VITE_EMAILJS_SERVICE_ID as string,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string,
       formState,
-      'hvT_Dffwoza-2f0Ob'
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string
     ).then(() => {
       setFormState({ from_name: '', from_email: '', message: '' });
        // Show the toast notification
@@ -60,20 +61,8 @@ export const Contact: React.FC = () => {
         <p className={`mx-auto text-lg leading-relaxed max-w-prose text-center mb-8  ${theme === 'dark' ? 'text-white' : 'text-gray-900'} mb-12`}>
         Feel free to reach out to me through my email,phone call and linkedin or through the  contact form. Whether you have a project in mind, a question, or just want to connect, I'd love to hear from you. Let's get in touch .
     </p>
-    {/* <div className="mx-auto text-lg leading-relaxed max-w-prose text-center mb-8 space-y-4">
-          <a href="mailto:mesfintdev@gmail.com" className={`flex items-center justify-center space-x-2 py-2 px-4 rounded-lg transition duration-200 ${theme === 'dark' ? 'bg-gray-800 hover:bg-gray-700 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-900'}`}>
-            <FaEnvelope /> <span>Email: mesfintdev@gmail.com</span>
-          </a>
-          <a href="tel:+358440646044" className={`flex items-center justify-center space-x-2 py-2 px-4 rounded-lg transition duration-200 ${theme === 'dark' ? 'bg-gray-800 hover:bg-gray-700 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-900'}`}>
-            <FaPhone /> <span>Phone: +358440646044</span>
-          </a>
-          <a href="https://www.linkedin.com/in/mesfin/" target="_blank" className={`flex items-center justify-center space-x-2 py-2 px-4 rounded-lg transition duration-200 ${theme === 'dark' ? 'bg-gray-800 hover:bg-gray-700 text-white' : 'bg-gray-200 hover:bg-gray-300 text-gray-900'}`}>
-            <FaLinkedin /> <span>LinkedIn: Mesfin on LinkedIn</span>
-          </a>
-        </div> */}
-    
-  
-          <form onSubmit={handleSubmit} className={`max-w-xl mx-auto  p-8 rounded-lg shadow-lg  ${theme === 'dark' ? 'bg-neutral-900' : 'bg-gray-100'} `}>
+     
+        <form onSubmit={handleSubmit} className={`max-w-xl mx-auto  p-8 rounded-lg shadow-lg  ${theme === 'dark' ? 'bg-neutral-900' : 'bg-gray-100'} `}>
             <div className="mb-4">
             <label htmlFor="name" className={`block font-bold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
             Name
@@ -119,7 +108,7 @@ export const Contact: React.FC = () => {
             </div>
             <button
               type="submit"
-              className="w-full py-3 bg-gray-800 hover:bg-gray-950 text-white font-bold rounded-lg transition duration-200"
+              className="w-full py-3 bg-gray-900 hover:bg-gray-950 text-white font-bold rounded-lg transition duration-200"
             >
               Send Message
             </button>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import LazyLoad from 'react-lazyload';
+import { projects } from '../../public/data';
 import { useTheme } from '../context/ThemeContext';
 
 interface Project {
@@ -14,7 +15,7 @@ interface Project {
 }
 
 export const Projects: React.FC = () => {
-  const [projects, setProjects] = useState<Project[]>([]);
+  //const [projects, setProjects] = useState<Project[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
   const [selectedTech, setSelectedTech] = useState<string>('');
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
@@ -22,13 +23,11 @@ export const Projects: React.FC = () => {
   const borderColor = theme === 'dark' ? 'border-gray-600' : 'border-gray-300';
 
   useEffect(() => {
-    fetch('/projects.json')
-      .then(response => response.json())
-      .then(data => {
-        setProjects(data);
-        setFilteredProjects(data);
-      })
-      .catch(error => console.error('Error fetching projects:', error));
+   
+        //setProjects(projects);
+        setFilteredProjects(projects);
+      
+     
   }, []);
 
   const handleTechChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -79,7 +78,7 @@ export const Projects: React.FC = () => {
 
         {/* Section Description */}
         <p className={`mx-auto text-lg leading-relaxed max-w-prose text-center mb-8 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-          These are the projects I have recently developed. You can view live demos of each project and also review the code on GitHub to see how they were built.
+        Here are some of the projects I’ve recently developed. You can explore live demos and review the source code on GitHub to see how they were built.
         </p>
         
         {/* Filters */}
